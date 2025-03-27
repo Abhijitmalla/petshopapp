@@ -1,0 +1,24 @@
+{
+    "products":[
+        {
+            "id":1,
+            "title":"Parrot"
+
+        },
+        {
+            "id":2,
+            "title":"Parrot"
+
+        },
+        {
+            "id":3,
+            "title":"Parrot"
+
+        },
+        {
+            "id":4,
+            "title":"Parrot"
+
+        }
+    ]
+}
