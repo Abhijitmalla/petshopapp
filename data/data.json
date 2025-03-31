@@ -2,22 +2,56 @@
     "products":[
         {
             "id":1,
-            "title":"Parrot"
+            "title":"Parrot",
+            "image":""
 
         },
         {
             "id":2,
-            "title":"Parrot"
+            "title":"dog",
+            "price":20
 
         },
         {
             "id":3,
-            "title":"Parrot"
+            "title":"Parrot",
+            "price":20
+
 
         },
         {
             "id":4,
-            "title":"Parrot"
+            "title":"Parrot",
+            "price":20
+
+
+        },
+        {
+            "id":5,
+            "title":"Parrot",
+            "price":20
+
+
+        },
+        {
+            "id":6,
+            "title":"Parrot",
+            "price":20
+
+
+        },
+        {
+            "id":7,
+            "title":"Parrot",
+            "price":20
+
+
+        },
+        {
+            "id":8,
+            "title":"Parrot",
+            "price":20
+
 
         }
     ]

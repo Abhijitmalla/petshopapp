@@ -8,7 +8,7 @@ const ProductCard = ({ item, handleLiked }) => {
   return (
     <View style={styles.container}>
       <Image 
-        source={require("@/assets/images/parrot.jpeg")} 
+        source={{uri:item.image}} 
         style={styles.coverImage} 
       />
       <View style={styles.content}>
@@ -31,9 +31,10 @@ export default ProductCard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 10,
+    marginTop: 0,
     position: 'relative',
     alignItems: 'center',
+    
   },
   coverImage: {
     height: 256,

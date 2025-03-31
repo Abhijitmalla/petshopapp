@@ -11,7 +11,10 @@ const categories = ['Trending Now', 'All', 'Dog', 'Fish', 'Cat', 'Birds'];
 
 const Home = () => {
   const [products, setProducts] = useState(data?.products);
-  const [selectedCategory, setSelectedCategory] = useState("Birds");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const filteredProducts = selectedCategory === "All"
+  ? products
+  : products.filter((product) => product.category === selectedCategory);
 const [isLiked,setIsLiked]=useState(false);
   const handleLiked = (item) => {
     const newProducts = products.map((prod) =>
@@ -53,11 +56,12 @@ const [isLiked,setIsLiked]=useState(false);
         
         )}
         showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ marginBottom: 150}} 
       />
 
       {/* Product List */}
       <FlatList    
-        data={products}
+        data={filteredProducts}
         numColumns={2}
         keyExtractor={(item) => item} // Fix keyExtractor
         renderItem={({ item }) => (
