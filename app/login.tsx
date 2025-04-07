@@ -52,7 +52,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <View style={styles.topImageContainer}>
-        <Image source={require("../../assets/images/Vector 1.png")} style={styles.topImage}/>
+        <Image source={require("../assets/images/Vector 1.png")} style={styles.topImage}/>
       </View>
       
       <Text style={styles.signText}>Sign in to your account</Text>
@@ -101,7 +101,7 @@ const Login = () => {
       </Text>
 
       <View style={styles.image2}>
-        <ImageBackground source={require("../../assets/images/Vector 2.png")} style={styles.imageStyle}/>
+        <ImageBackground source={require("../assets/images/Vector 2.png")} style={styles.imageStyle}/>
       </View>
     </View>
   );

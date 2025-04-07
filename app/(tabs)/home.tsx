@@ -1,21 +1,24 @@
-import { StyleSheet, View, Text, TextInput, FlatList } from 'react-native';
+import { StyleSheet, View, TextInput, FlatList } from 'react-native';
 import React, { useState } from 'react';
 import Header from '@/components/Home/Header';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Category from '@/components/Home/Category';
 import ImageBanner from '@/components/Home/ImageBanner';
 import ProductCard from '@/components/Home/ProductCard';
+import Category from '@/components/Home/Category';
 import data from '@/data/data.json';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const categories = ['Trending Now', 'All', 'Dog', 'Fish', 'Cat', 'Birds'];
+const categories = ['Find your Favorite Pet'];
 
 const Home = () => {
-  const [products, setProducts] = useState(data?.products);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const filteredProducts = selectedCategory === "All"
-  ? products
-  : products.filter((product) => product.category === selectedCategory);
-const [isLiked,setIsLiked]=useState(false);
+  const [searchQuery, setSearchQuery] = useState(""); // Search query state
+  const [products, setProducts] = useState(data.products); // Load data.json products
+  const [selectedCategory, setSelectedCategory] = useState("Find your Favorite Pet");
+  
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.trim().toLowerCase()) // Trim spaces & ignore case
+  );
+  const [isLiked,setIsLiked]=useState(false);
   const handleLiked = (item) => {
     const newProducts = products.map((prod) =>
       prod.id === item.id ? { ...prod, 
@@ -24,24 +27,28 @@ const [isLiked,setIsLiked]=useState(false);
     setProducts(newProducts);
   };
 
+
   return (
     <View style={{ flex: 1, padding: 0, marginTop: 10 }}>
-      {/* Header */}
       <Header />
 
       {/* Search Bar */}
-      <View style={styles.inputContainer}>
+      <SafeAreaView style={styles.inputContainer}>
         <View style={styles.icon}>
           <AntDesign name="search1" size={26} color="#C0C0C0" />
         </View>
-        <TextInput style={styles.textInput} placeholder="Search" />
-      </View>
+        <TextInput
+          style={styles.textInput}
+          placeholder="Search for pets..."
+          value={searchQuery}
+          onChangeText={(text) => setSearchQuery(text)} // Updates searchQuery state
+        />
+      </SafeAreaView>
 
       {/* Image Banner */}
-      <ImageBanner />
-
-      {/* Category List */}
-      <FlatList
+      {/* <ImageBanner /> */}
+          {/* Category List */}
+          <FlatList
         data={categories}
         horizontal
         keyExtractor={(item) => item}
@@ -56,20 +63,19 @@ const [isLiked,setIsLiked]=useState(false);
         
         )}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{ marginBottom: 150}} 
+        //  contentContainerStyle={{ marginBottom: 500}} 
       />
 
-      {/* Product List */}
-      <FlatList    
-        data={filteredProducts}
-        numColumns={2}
-        keyExtractor={(item) => item} // Fix keyExtractor
-        renderItem={({ item }) => (
-          
-          <ProductCard item={item} handleLiked={handleLiked} />
-        
-        )}
-      />
+      {/* Product List (Filtered) */}
+      <FlatList
+  data={filteredProducts}
+  numColumns={2}
+  keyExtractor={(item) => item.id.toString()}
+  renderItem={({ item }) => (
+    <ProductCard item={item} handleLiked={handleLiked} /> // Pass handleLiked as a prop
+  )}
+/>
+
     </View>
   );
 };
@@ -98,4 +104,4 @@ const styles = StyleSheet.create({
   icon: {
     marginRight: 10,
   },
-}); 
+});

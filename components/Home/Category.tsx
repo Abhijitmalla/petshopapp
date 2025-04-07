@@ -18,16 +18,18 @@ export default Category;
 
 const styles = StyleSheet.create({
   category:{
-    fontSize:16,
+    fontSize:15,
     fontWeight:600,
+    height:40,
     color :"#938F8F",
     backgroundColor:"#DFDCDC",
     padding:10,
     textAlign:"center",
     borderRadius:20,
-    marginHorizontal:20,
+    marginHorizontal:10,
     paddingHorizontal:20,
-    paddingVertical:10,marginTop:20
+    paddingVertical:10,marginTop:1,
+    marginBottom:10,
    
   }
 })

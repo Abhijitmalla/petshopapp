@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity, ImageBackgr
 import React from 'react';
 import { useRouter } from 'expo-router';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { LinearGradient } from 'expo-linear-gradient'; // Corrected import
+import { LinearGradient } from 'expo-linear-gradient'; 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { ScrollView } from 'react-native-gesture-handler';
 import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
@@ -64,7 +64,7 @@ createUserWithEmailAndPassword(auth, email, password)
   return (
     <View style={styles.container}>
       <View style={styles.topImageContainer}>
-      <Image source={require("../../assets/images/Vector 2.png")} style={styles.topImage}/>
+      <Image source={require("../assets/images/Vector 1.png")} style={styles.topImage}/>
       </View>
      
       
@@ -140,7 +140,7 @@ createUserWithEmailAndPassword(auth, email, password)
        </Text>
 </Text>
     <View style={styles.image2}>
-<ImageBackground source={require("../../assets/images/Vector 2.png")} style={styles.imageStyle}/>
+<ImageBackground source={require("../assets/images/Vector 2.png")} style={styles.imageStyle}/>
     </View>
     </View>
   );

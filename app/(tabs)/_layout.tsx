@@ -19,7 +19,7 @@ export default function TabLayout() {
         <Tabs.Screen
           name="favorite"
           options={{
-            title: 'Favorite',
+            title: 'Details',
             headerShown: false,
             tabBarIcon: ({ color }) => <FontAwesome name="heart" size={24} color="blue"/>,
           }}
@@ -38,6 +38,14 @@ export default function TabLayout() {
             title: 'Profile',
             headerShown: false,
             tabBarIcon: ({ color }) => <FontAwesome6 name="people-group" size={24} color="blue" />,
+          }}
+        />
+         <Tabs.Screen
+          name="cart"
+          options={{
+            title: 'cart',
+            headerShown: false,
+            tabBarIcon: ({ color }) => <FontAwesome6 name="cart-flatbed" size={24} color="blue" />,
           }}
         />
       </Tabs>

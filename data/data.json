@@ -1,58 +1,192 @@
 {
-    "products":[
-        {
-            "id":1,
-            "title":"Parrot",
-            "image":""
+    "products": [
+      {
+        "id": 1,
+        "title": "Macaw Parrot",
+        "price": 2000.00,
+        "image": "https://images.unsplash.com/photo-1534566991776-92e46728f72d"
+    
 
-        },
-        {
-            "id":2,
-            "title":"dog",
-            "price":20
+      },
+      {
+        "id": 2,
+        "title": "Betta Fish",
+        "price": 25.00,
+        "image": "https://images.unsplash.com/photo-1516683037151-9a17603a8dc7"
+       
+      },
+      {
+        "id": 3,
+        "title": "African Grey Parrot",
+        "price": 1500.00,
+        "image": "https://images.unsplash.com/photo-1626133830160-2d463a6b64a7"
 
-        },
-        {
-            "id":3,
-            "title":"Parrot",
-            "price":20
-
-
-        },
-        {
-            "id":4,
-            "title":"Parrot",
-            "price":20
-
-
-        },
-        {
-            "id":5,
-            "title":"Parrot",
-            "price":20
-
-
-        },
-        {
-            "id":6,
-            "title":"Parrot",
-            "price":20
-
-
-        },
-        {
-            "id":7,
-            "title":"Parrot",
-            "price":20
-
-
-        },
-        {
-            "id":8,
-            "title":"Parrot",
-            "price":20
-
-
-        }
+      },
+      {
+        "id": 4,
+        "title": "Koi Fish",
+        "price": 200.00,
+        "image": "https://plus.unsplash.com/premium_photo-1723672584731-52b5f1a67543"
+      },
+      {
+        "id": 5,
+        "title": "Siberian Husky",
+        "price": 1300.00,
+        "image": "https://images.unsplash.com/photo-1511090289856-9ca50546f1fb"
+      },
+      {
+        "id": 6,
+        "title": "Bengal Cat",
+        "price": 900.00,
+        "image": "https://images.unsplash.com/photo-1603277160434-df7471138363"
+      },
+      {
+        "id": 7,
+        "title": "Golden Retriever",
+        "price": 1200.00,
+        "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16"
+      },
+      {
+        "id": 8,
+        "title": "Persian Cat",
+        "price": 800.00,
+        "image": "https://images.unsplash.com/photo-1574158622682-e40e69881006"
+      },
+      {
+        "id": 9,
+        "title": "French Bulldog",
+        "price": 2500.00,
+        "image": "https://images.unsplash.com/photo-1600411953537-26ddee2a1ba6"
+      },
+      {
+        "id": 10,
+        "title": "Rabbit",
+        "price": 1200.00,
+        "image": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308"
+      },
+      {
+        "id": 11,
+        "title": "Cockatoo Parrot",
+        "price": 1800.00,
+        "image": "https://plus.unsplash.com/premium_photo-1669673986492-7236c908abbc"
+      },
+      {
+        "id": 12,
+        "title": "Goldfish",
+        "price": 15.00,
+        "image": "https://plus.unsplash.com/premium_photo-1722857069244-0a5944491d9d"
+      },
+      {
+        "id": 13,
+        "title": "German Shepherd",
+        "price": 1000.00,
+        "image": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6"
+      },
+      {
+        "id": 14,
+        "title": "Scottish Fold Cat",
+        "price": 850.00,
+        "image": "https://images.unsplash.com/photo-1627373574917-572a86881d73"
+      },
+      {
+        "id": 15,
+        "title": "Canary Bird",
+        "price": 50.00,
+        "image": "https://images.unsplash.com/photo-1506868124750-91c0a87be143"
+      },
+      {
+        "id": 16,
+        "title": "Clownfish",
+        "price": 30.00,
+        "image": "https://images.unsplash.com/photo-1613779907266-f85db34edae5"
+      },
+      {
+        "id": 17,
+        "title": "Labrador Retriever",
+        "price": 1100.00,
+        "image": "https://images.unsplash.com/photo-1537204696486-967f1b7198c8"
+      },
+      {
+        "id": 18,
+        "title": "Ragdoll Cat",
+        "price": 950.00,
+        "image": "https://images.unsplash.com/photo-1620933288385-b2f6f1931d9e"
+      },
+      {
+        "id": 19,
+        "title": "Lovebird",
+        "price": 70.00,
+        "image": "https://images.unsplash.com/photo-1499995909106-2d6741de64ec"
+      },
+      {
+        "id": 20,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },
+      {
+        "id": 21,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },
+      {
+        "id": 22,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 23,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 24,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 25,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 26,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 27,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 28,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 29,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 30,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },    {
+        "id": 31,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },
+      {
+        "id": 32,
+        "title": "Angelfish",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+      },
     ]
-}
+  }
+  

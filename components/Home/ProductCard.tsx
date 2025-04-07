@@ -1,12 +1,33 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { useRouter } from "expo-router";
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
 const ProductCard = ({ item, handleLiked }) => {
   if (!item) return null; // Prevents crashes if item is undefined
+  const router = useRouter();
+
+
+
 
   return (
-    <View style={styles.container}>
+    
+    <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={()=>{
+      router.push({
+        pathname: '/favorite',
+        params: {
+          id: item.id.toString(), // must be string
+          title: item.title,
+          price: item.price.toString(),
+          image: item.image,
+        },
+     });
+      
+    }}
+    style={styles.container}>
       <Image 
         source={{uri:item.image}} 
         style={styles.coverImage} 
@@ -22,7 +43,8 @@ const ProductCard = ({ item, handleLiked }) => {
           <AntDesign name="hearto" size={20} color="#E55B5B" />
         )}
       </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
+  
   );
 };
 
@@ -34,6 +56,9 @@ const styles = StyleSheet.create({
     marginTop: 0,
     position: 'relative',
     alignItems: 'center',
+    marginBottom:10,
+    
+
     
   },
   coverImage: {
@@ -65,5 +90,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 15,
     right: 15,
+    
   },
 });
