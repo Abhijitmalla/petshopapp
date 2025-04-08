@@ -4,35 +4,27 @@ const cartSlice = createSlice({
     name: "cart",
     initialState: [],
     reducers: {
-        addToCart: (state, actions) => {
-            const isAvailable = state.find((item) => item.name === actions.payload.name);
+        addToCart: (state, action) => {
+            const isAvailable = state.find((item) => item.title === action.payload.title);
             if (isAvailable) {
                 isAvailable.quantity += 1; 
             } else {
-                state.push({ ...actions.payload, quantity: 1 }); 
+                state.push({ ...action.payload, quantity: 1 }); 
             }
         },
-        removeFromCart: (state, actions) => {
-            return state.filter((item) => item.name !== actions.payload.name);
+        removeFromCart: (state, action) => {
+            return state.filter((item) => item.title !== action.payload.title);
         },
-        incrementQuantity: (state, actions) => {
-            const isAvailable = state.find((value) => value.name == actions.payload.name
-        ); 
-        if (isAvailable) {
-        isAvailable.quantity + 1;   
-        }
-        else{
-            console.log("not Available");
-        }
-        },
-        decrementQuantity: (state, actions) => {
-            const isAvailable = state.find((item) => item.name === actions.payload.name);
+        incrementQuantity: (state, action) => {
+            const isAvailable = state.find((item) => item.title === action.payload.title);
             if (isAvailable) {
-                if (isAvailable.quantity === 1) {
-                    isAvailable.quantity = 1; // Keep it at 1, or maybe remove it?
-                } else {
-                    isAvailable.quantity -= 1;
-                }
+                isAvailable.quantity += 1;
+            }
+        },
+        decrementQuantity: (state, action) => {
+            const isAvailable = state.find((item) => item.title === action.payload.title);
+            if (isAvailable && isAvailable.quantity > 1) {
+                isAvailable.quantity -= 1;
             }
         },
     },

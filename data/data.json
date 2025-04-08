@@ -17,9 +17,10 @@
       },
       {
         "id": 3,
-        "title": "African Grey Parrot",
-        "price": 1500.00,
-        "image": "https://images.unsplash.com/photo-1626133830160-2d463a6b64a7"
+        "title": "Guinea Pig",
+        "price": 150.00,
+        "image":"https://images.unsplash.com/photo-1512087499053-023f060e2cea"
+        
 
       },
       {
@@ -126,9 +127,9 @@
       },
       {
         "id": 21,
-        "title": "Angelfish",
-        "price": 35.00,
-        "image": "https://images.unsplash.com/photo-1522720833375-9c27ffb02a5e"
+        "title": "African Grey Parrot",
+        "price": 350.00,
+        "image": "https://images.unsplash.com/photo-1626133830160-2d463a6b64a7"
       },
       {
         "id": 22,

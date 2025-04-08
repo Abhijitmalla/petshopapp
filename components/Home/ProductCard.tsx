@@ -34,7 +34,7 @@ const ProductCard = ({ item, handleLiked }) => {
       />
       <View style={styles.content}>
         <Text style={styles.text}>{item.title}</Text> 
-        <Text style={styles.price}>${item.price}</Text>
+        <Text style={styles.price}>₹{item.price}</Text>
       </View>
       <TouchableOpacity onPress={() => handleLiked(item)} style={styles.heart}>
         {item?.isLiked ? (

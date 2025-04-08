@@ -68,13 +68,13 @@ const Favorite = () => {
           <MaterialIcons name="favorite-border" size={24} color="black" />
         </View>
         <Text style={{ marginTop: 5, fontSize: 15, color: 'grey' }}>
-          ${price}
+        ₹{price}
         </Text>
         <TouchableOpacity
         onPress={()=>{
           dispatch(addToCart({id,
             title,
-            price, // convert to number if it's a string
+            price: parseFloat(price),
             image}));
           router.push("/(tabs)/cart")
         }}
